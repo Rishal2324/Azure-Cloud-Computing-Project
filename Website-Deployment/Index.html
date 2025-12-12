@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishal's Azure Web App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 20px;
+        }
+        
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 800px;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.8s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .info-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        .info-item {
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+        
+        .label {
+            font-weight: bold;
+            color: #ffd700;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 10px 5px;
+            font-size: 0.9em;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Welcome to My Azure App Service!</h1>
+        <p class="subtitle">Successfully Deployed on Microsoft Azure</p>
+        
+        <div class="info-box">
+            <div class="info-item">
+                <span class="label">Student Name:</span> Rishal Panda
+            </div>
+            <div class="info-item">
+                <span class="label">Project:</span> Cloud Computing - Major Project
+            </div>
+            <div class="info-item">
+                <span class="label">Task:</span> Task 2 - Website Deployment using Azure App Service
+            </div>
+            <div class="info-item">
+                <span class="label">Deployment Date:</span> <span id="date"></span>
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <span class="badge">Azure App Service</span>
+            <span class="badge">Cloud Computing</span>
+            <span class="badge">Web Deployment</span>
+        </div>
+        
+        <div class="footer">
+            <p>⚡ Powered by Microsoft Azure Cloud Platform</p>
+        </div>
+    </div>
+    
+    <script>
+        // Display current date
+        document.getElementById('date').textContent = new Date().toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>
